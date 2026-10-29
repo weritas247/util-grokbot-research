@@ -455,5 +455,138 @@
     "site": "develog",
     "url": "https://develog.develrocket.com/@kimkyungil/grok-bot-%EB%A6%AC%EB%B7%B0",
     "type": "review"
+  },
+  {
+    "id": "source-ios-119",
+    "date": "2026-10-28",
+    "title": "Grok Bot 1.19 사용자 확인 글",
+    "summary": "Grok Bot 1.19 사용자 확인 글",
+    "tags": [
+      "출처"
+    ],
+    "sources": [
+      {
+        "title": "Grok Bot 1.19 사용자 확인 글",
+        "url": "https://x.com/i/status/2115410381891899419"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "site": "X",
+    "url": "https://x.com/i/status/2115410381891899419",
+    "type": "community"
+  },
+  {
+    "id": "source-martinweiss",
+    "date": "2026-10-28",
+    "title": "@martinpaulweiss: Grok Bot app 1.19",
+    "summary": "@martinpaulweiss: Grok Bot app 1.19",
+    "tags": [
+      "출처"
+    ],
+    "sources": [
+      {
+        "title": "@martinpaulweiss: Grok Bot app 1.19",
+        "url": "https://x.com/martinpaulweiss/status/2115549315544277494"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "site": "X",
+    "url": "https://x.com/martinpaulweiss/status/2115549315544277494",
+    "type": "community"
+  },
+  {
+    "id": "source-kayode",
+    "date": "2026-10-28",
+    "title": "@KayodeMusings: 40-bot fleet",
+    "summary": "@KayodeMusings: 40-bot fleet",
+    "tags": [
+      "출처"
+    ],
+    "sources": [
+      {
+        "title": "@KayodeMusings: 40-bot fleet",
+        "url": "https://x.com/KayodeMusings/status/2115395556843405559"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "site": "X",
+    "url": "https://x.com/KayodeMusings/status/2115395556843405559",
+    "type": "community"
+  },
+  {
+    "id": "source-clairevo",
+    "date": "2026-10-28",
+    "title": "@clairevo: How I AI Personal Agent Bench",
+    "summary": "@clairevo: How I AI Personal Agent Bench",
+    "tags": [
+      "출처"
+    ],
+    "sources": [
+      {
+        "title": "@clairevo: How I AI Personal Agent Bench",
+        "url": "https://x.com/clairevo/status/2115440745738027198"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "site": "X",
+    "url": "https://x.com/clairevo/status/2115440745738027198",
+    "type": "review"
+  },
+  {
+    "id": "source-howiai-yt",
+    "date": "2026-10-28",
+    "title": "How I AI 에피소드 (YouTube)",
+    "summary": "How I AI 에피소드 (YouTube)",
+    "tags": [
+      "출처"
+    ],
+    "sources": [
+      {
+        "title": "How I AI 에피소드 (YouTube)",
+        "url": "https://www.youtube.com/watch?v=hnCoQ5wB-GU"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "site": "YouTube",
+    "url": "https://www.youtube.com/watch?v=hnCoQ5wB-GU",
+    "type": "review"
+  },
+  {
+    "id": "source-xmoney-psa",
+    "date": "2026-10-29",
+    "title": "@ProfUnfiltered: X Money PSA",
+    "summary": "@ProfUnfiltered: X Money PSA",
+    "tags": [
+      "출처"
+    ],
+    "sources": [
+      {
+        "title": "@ProfUnfiltered: X Money PSA",
+        "url": "https://x.com/ProfUnfiltered/status/2115639941405249674"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "site": "X",
+    "url": "https://x.com/ProfUnfiltered/status/2115639941405249674",
+    "type": "community"
+  },
+  {
+    "id": "source-digg-calls",
+    "date": "2026-10-28",
+    "title": "Digg: Grok @Bot reportedly can call",
+    "summary": "Digg: Grok @Bot reportedly can call",
+    "tags": [
+      "출처"
+    ],
+    "sources": [
+      {
+        "title": "Digg: Grok @Bot reportedly can call",
+        "url": "https://digg.com/ai/pr0s5ixy"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "site": "Digg",
+    "url": "https://digg.com/ai/pr0s5ixy",
+    "type": "blog"
   }
 ]

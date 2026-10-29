@@ -405,5 +405,30 @@
     "date_label": "8/11 (미국)",
     "version": null,
     "kind": "blog"
+  },
+  {
+    "id": "update-21",
+    "date": "2026-10-28",
+    "title": "모바일 앱 1.19 — 노트 없이 배포",
+    "summary": "iPhone 앱 1.19가 릴리스 노트 없이 나왔어요(스토어 노트는 '버그 수정'). 사용자들이 찾은 변화: 음성 대화를 눌러 대화록 보기, 홈 화면 필터(메시지·봇·그룹 채팅·파일·루틴), 호박 모양 봇, Connect apps 새 디자인과 사용 앱 기반 추천, 하단 고정 검색창. 공식 확인 전인 커뮤니티 관찰이에요.",
+    "tags": [
+      "모바일",
+      "음성"
+    ],
+    "sources": [
+      {
+        "title": "Grok Bot 1.19 사용자 확인 글",
+        "url": "https://x.com/i/status/2115410381891899419"
+      },
+      {
+        "title": "@martinpaulweiss: Grok Bot app 1.19",
+        "url": "https://x.com/martinpaulweiss/status/2115549315544277494"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "date_label": "10/28 20:48 KST",
+    "version": "iOS 1.19",
+    "kind": "blog",
+    "time_kst": "20:48"
   }
 ]

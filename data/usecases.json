@@ -170,5 +170,56 @@
     "metrics": [
       "2/5점"
     ]
+  },
+  {
+    "id": "usecase-09",
+    "date": "2026-10-28",
+    "title": "봇 40개 운영, 토큰 사용 79% 절감 (@KayodeMusings, 10/28)",
+    "summary": "① 매시간 알림 루틴 대신 아침 7:15 한 번 동기화해 iPhone 미리 알림·캘린더·알람에 직접 기록 ② 브라우저로 사용량 페이지를 돌던 일을 로컬 스크립트+Grok Bot Page 대시보드로 교체(봇들은 로컬로 읽어 0토큰) ③ 4단계 봇 간 릴레이를 하루 끝 일괄 처리로 ④ 겹치는 감시 봇을 하나로 합쳐 X·Cursor 포럼·Changelog를 하루 한 번 공유 폴더에 저장 ⑤ 무거운 코드·영상 작업은 Codex CLI·Claude Code 같은 로컬 CLI로 보내고 Grok Bot은 지휘·커넥터·Vault만 맡김.",
+    "tags": [
+      "루틴",
+      "비용",
+      "Codex"
+    ],
+    "sources": [
+      {
+        "title": "@KayodeMusings: 40-bot fleet",
+        "url": "https://x.com/KayodeMusings/status/2115395556843405559"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "actor": "봇 40개 운영자",
+    "category": "운영 최적화",
+    "metrics": [
+      "토큰 79% 절감(분당 1.06M→0.22M)",
+      "봇 간 전달 하루 118회→0회",
+      "주당 약 98회 깨우기 절약"
+    ]
+  },
+  {
+    "id": "usecase-10",
+    "date": "2026-10-28",
+    "title": "개인 에이전트 비교 벤치에서 1위 (Claire Vo, 10/28)",
+    "summary": "How I AI 진행자 Claire Vo가 에이전트 4개를 과제 9개로 비교했어요. 결과는 @bot(Grok Bot)이 큰 차이로 1위, 2위 Muse, 그다음 ChatGPT Dot, Claude Duet 순이에요. 전체 과정은 YouTube 에피소드에 있어요.",
+    "tags": [
+      "비교"
+    ],
+    "sources": [
+      {
+        "title": "@clairevo: How I AI Personal Agent Bench",
+        "url": "https://x.com/clairevo/status/2115440745738027198"
+      },
+      {
+        "title": "How I AI 에피소드 (YouTube)",
+        "url": "https://www.youtube.com/watch?v=hnCoQ5wB-GU"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "actor": "Claire Vo (How I AI)",
+    "category": "비교 리뷰",
+    "metrics": [
+      "에이전트 4개",
+      "과제 9개"
+    ]
   }
 ]
