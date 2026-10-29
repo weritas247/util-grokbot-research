@@ -67,3 +67,11 @@ export function tagChips(item) {
     .map(tag => `<span class="tag">${esc(tag)}</span>`)
     .join('')}</div>`;
 }
+
+/** 상세 설명을 안전한 마크업으로 렌더링합니다. */
+export function detailsMarkup(item) {
+  if (!Array.isArray(item.details) || !item.details.length) return '';
+  const inline = value => esc(value).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  const sections = item.details.map(part => `<section class="detail-section"><h4>${inline(part.heading)}</h4>${part.body ? `<p>${inline(part.body)}</p>` : ''}${part.bullets?.length ? `<ul>${part.bullets.map(text => `<li>${inline(text)}</li>`).join('')}</ul>` : ''}</section>`).join('');
+  return `<details class="item-details"><summary data-section-count="${item.details.length}">자세히 보기 · ${item.details.length}개 섹션</summary><div class="details-content">${item.details_note ? `<aside class="details-note"><strong>참고</strong><span>${inline(item.details_note)}</span></aside>` : ''}${sections}<div class="details-actions"><button type="button" class="collapse-details">접기</button><button type="button" class="copy-item-link" data-copy-id="${esc(item.id)}">이 항목 링크 복사</button></div></div></details>`;
+}

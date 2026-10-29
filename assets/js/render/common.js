@@ -1,8 +1,8 @@
-import { esc, isNew, sourceLinks, tagChips } from '../data.js';
+import { esc, isNew, sourceLinks, tagChips, detailsMarkup } from '../data.js';
 
 /** 카드 HTML을 만듭니다. */
 export function card(item, meta, { number = false, actor = false } = {}) {
-  return `<article class="card" id="${esc(item.id)}">${actor ? `<span class="actor">${esc(item.actor || '')}</span>` : ''}${number ? `<span class="number">${String(item.order || 0).padStart(2, '0')}</span>` : ''}<h3>${esc(item.title)} ${isNew(item, meta) ? '<span class="new">NEW</span>' : ''}</h3><p>${esc(item.summary)}</p>${item.metrics?.length ? `<div class="metrics">${item.metrics.map(metric => `<span>${esc(metric)}</span>`).join('')}</div>` : ''}${tagChips(item)}<div class="meta">${sourceLinks(item)}</div></article>`;
+  return `<article class="card" id="${esc(item.id)}">${actor ? `<span class="actor">${esc(item.actor || '')}</span>` : ''}${number ? `<span class="number">${String(item.order || 0).padStart(2, '0')}</span>` : ''}<h3>${esc(item.title)} ${isNew(item, meta) ? '<span class="new">NEW</span>' : ''}</h3><p>${esc(item.summary)}</p>${detailsMarkup(item)}${item.metrics?.length ? `<div class="metrics">${item.metrics.map(metric => `<span>${esc(metric)}</span>`).join('')}</div>` : ''}${tagChips(item)}<div class="meta">${sourceLinks(item)}</div></article>`;
 }
 
 /** 섹션 HTML을 만듭니다. */

@@ -1,4 +1,4 @@
-import { esc, sourceLinks, tagChips } from '../data.js';
+import { esc, sourceLinks, tagChips, detailsMarkup } from '../data.js';
 import { card, filters, section } from './common.js';
 
 /** 사용 사례 영역을 렌더링합니다. */
@@ -6,7 +6,7 @@ export function renderUsecases(data) {
   const cards = data.usecases
     .map(
       item =>
-        `<article class="card usecase-card" id="${esc(item.id)}" data-category="${esc(item.category)}" data-tags="${esc(item.tags.join('|'))}"><span class="actor">${esc(item.actor)}</span><h3>${esc(item.title)}</h3><p>${esc(item.summary)}</p>${item.metrics?.length ? `<div class="metrics">${item.metrics.map(metric => `<span>${esc(metric)}</span>`).join('')}</div>` : ''}${tagChips(item)}<div class="meta">${sourceLinks(item)}</div></article>`,
+        `<article class="card usecase-card" id="${esc(item.id)}" data-category="${esc(item.category)}" data-tags="${esc(item.tags.join('|'))}"><span class="actor">${esc(item.actor)}</span><h3>${esc(item.title)}</h3><p>${esc(item.summary)}</p>${detailsMarkup(item)}${item.metrics?.length ? `<div class="metrics">${item.metrics.map(metric => `<span>${esc(metric)}</span>`).join('')}</div>` : ''}${tagChips(item)}<div class="meta">${sourceLinks(item)}</div></article>`,
     )
     .join('');
   const body = `${filters(data.usecases, 'usecases', { category: true })}<div class="grid" id="usecase-grid">${cards}</div>`;
@@ -44,7 +44,7 @@ export function renderCaveats(data) {
   const cards = data.caveats
     .map(
       item =>
-        `<article class="card severity-${item.severity}" id="${esc(item.id)}"><span class="severity-label"><svg aria-hidden="true" viewBox="0 0 20 20"><path d="M10 2 18 17H2zM10 7v5m0 2v.1"/></svg>${labels[item.severity]}</span><h3>${esc(item.title)}</h3><p>${esc(item.summary)}</p>${tagChips(item)}<div class="meta">${sourceLinks(item)}</div></article>`,
+        `<article class="card severity-${item.severity}" id="${esc(item.id)}"><span class="severity-label"><svg aria-hidden="true" viewBox="0 0 20 20"><path d="M10 2 18 17H2zM10 7v5m0 2v.1"/></svg>${labels[item.severity]}</span><h3>${esc(item.title)}</h3><p>${esc(item.summary)}</p>${detailsMarkup(item)}${tagChips(item)}<div class="meta">${sourceLinks(item)}</div></article>`,
     )
     .join('');
   const note = esc(data.meta.notes[0]
@@ -63,7 +63,7 @@ export function renderRecommendations(data) {
   const steps = recommendation.items
     .map(
       (item, index) =>
-        `<article class="step" id="${esc(item.id)}"><span class="step-number">${String(index + 1).padStart(2, '0')}</span><div><h3>${esc(item.title)}</h3><p>${esc(item.summary)}</p>${tagChips(item)}<div class="meta">${sourceLinks(item)}</div></div></article>`,
+        `<article class="step" id="${esc(item.id)}"><span class="step-number">${String(index + 1).padStart(2, '0')}</span><div><h3>${esc(item.title)}</h3><p>${esc(item.summary)}</p>${detailsMarkup(item)}${tagChips(item)}<div class="meta">${sourceLinks(item)}</div></div></article>`,
     )
     .join('');
   const body =

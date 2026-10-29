@@ -1,4 +1,4 @@
-import { esc, isNew, kindLabels, sourceLinks } from '../data.js';
+import { esc, isNew, kindLabels, sourceLinks, detailsMarkup } from '../data.js';
 import { section } from './common.js';
 
 /** 업데이트 타임라인을 렌더링합니다. */
@@ -11,7 +11,7 @@ export function renderUpdates(data) {
   const cards = items
     .map(
       item =>
-        `<article class="timeline-item" id="${esc(item.id)}" data-kind="${item.kind}" data-month="${item.date.slice(0, 7)}"><div class="timeline-date"><time>${item.date.replaceAll('-', '.')}</time>${item.date_label ? `<small>${esc(item.date_label)}</small>` : ''}${item.time_kst && !/KST/.test(item.date_label || '') ? `<small>${esc(item.time_kst)} KST</small>` : ''}</div><div class="timeline-card"><div class="badges">${item.version ? `<span class="badge">${esc(item.version)}</span>` : ''}<span class="badge">${kindLabels[item.kind]}</span></div><h3>${esc(item.title)} ${isNew(item, data.meta) ? '<span class="new">NEW</span>' : ''}</h3><p>${esc(item.summary)}</p><div class="meta">${sourceLinks(item)}</div></div></article>`,
+        `<article class="timeline-item" id="${esc(item.id)}" data-kind="${item.kind}" data-month="${item.date.slice(0, 7)}"><div class="timeline-date"><time>${item.date.replaceAll('-', '.')}</time>${item.date_label ? `<small>${esc(item.date_label)}</small>` : ''}${item.time_kst && !/KST/.test(item.date_label || '') ? `<small>${esc(item.time_kst)} KST</small>` : ''}</div><div class="timeline-card"><div class="badges">${item.version ? `<span class="badge">${esc(item.version)}</span>` : ''}<span class="badge">${kindLabels[item.kind]}</span></div><h3>${esc(item.title)} ${isNew(item, data.meta) ? '<span class="new">NEW</span>' : ''}</h3><p>${esc(item.summary)}</p>${detailsMarkup(item)}<div class="meta">${sourceLinks(item)}</div></div></article>`,
     )
     .join('');
   const monthFilters = months

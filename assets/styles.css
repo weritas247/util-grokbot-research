@@ -277,6 +277,24 @@ main {
   line-height:1.65
 }
 
+.item-details { margin:12px 0 14px; }
+.item-details > summary { width:max-content; max-width:100%; color:var(--accent); font-weight:700; cursor:pointer; }
+.details-content { max-width:70ch; padding-top:10px; }
+.detail-section { padding:13px 0; border-top:1px solid var(--line); }
+.detail-section h4 { font-size:17px; line-height:1.4; margin:3px 0 7px; }
+.detail-section p,.detail-section li { font-size:16px; line-height:1.75; }
+.detail-section p { margin:0 0 8px; }
+.detail-section ul { padding-left:22px; margin:8px 0 0; }
+.detail-section li { margin:8px 0; }
+.details-note { display:flex; gap:8px; background:var(--surface-2); color:var(--muted); border-left:3px solid var(--accent); border-radius:7px; padding:10px 12px; font-size:13px; margin-bottom:8px; }
+.details-note strong { color:var(--text); flex:none; }
+.details-actions { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+.collapse-details { border:1px solid var(--line); background:var(--surface); color:var(--muted); border-radius:8px; padding:7px 10px; cursor:pointer; font-size:13px; }
+.card,.step,.timeline-item { scroll-margin-top:90px; }
+.copy-item-link { border:1px solid var(--line); background:var(--surface); color:var(--muted); border-radius:8px; padding:7px 10px; cursor:pointer; font-size:13px; }
+.grid > :has(.item-details[open]) { grid-column:1 / -1; height:auto; }
+.step .details-content { max-width:70ch; }
+
 .number {
   display:inline-grid;
   place-items:center;
@@ -863,8 +881,10 @@ footer a {
 @media(max-width:720px) {
 
   html {
-    scroll-padding-top:84px
+    scroll-padding-top:96px
   }
+
+  .card,.step,.timeline-item { scroll-margin-top:96px; }
 
   .top {
     height:auto;

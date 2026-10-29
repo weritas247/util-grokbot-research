@@ -30,6 +30,11 @@
   "date_label": "10/12~10/18",     // 선택. 원문 표기 그대로 보여줄 때
   "title": "제목",
   "summary": "본문 1~3문장 (원문 사실만)",
+  "details": [
+    { "heading": "무엇이 바뀌었나", "body": "원문 사실을 충분히 설명" },
+    { "heading": "왜 중요한가", "bullets": ["원문에 근거한 영향"] }
+  ],
+  "details_note": "선택: 원문 X 게시물을 열 수 없어 요약만 확인됨",
   "tags": ["태그"],
   "sources": [{ "title": "표시 이름", "url": "https://..." }],
   "added_at": "YYYY-MM-DD"         // 이 항목을 데이터에 넣은 날
@@ -56,7 +61,8 @@ URL 규칙: 원문 출처가 `x.ai/changelog/bot` 처럼 축약돼 있으면 `ht
 - 다크/라이트: `prefers-color-scheme` 따르고 토글로 덮어쓰기(localStorage 저장). 대비 WCAG AA.
 - 반응형: 390px 모바일에서 내비는 가로 스크롤 칩, 카드 1열. 데스크톱 1280px에서 카드 2~3열.
 - 고정 상단 내비 + 현재 섹션 하이라이트.
-- 검색: 모든 데이터 파일의 title/summary/tags/actor를 대상으로 하는 실시간 검색. 결과는 섹션별로 묶어 보여주고 클릭하면 해당 항목으로 스크롤·하이라이트.
+- 검색: 모든 데이터 파일의 title/summary/tags/actor 및 상세 설명의 heading/body/bullets를 대상으로 하는 실시간 검색. 상세 내용에만 일치하면 해당 문장 주변을 스니펫으로 보여주고, 결과를 누르면 해당 항목을 펼쳐 스크롤·하이라이트.
+- 업데이트·사례·팁·주의·추천 항목은 `details` 배열을 필수로 가진다. 각 섹션에는 heading과 body 또는 bullets가 필요하고, 본문은 원문 사실만으로 무엇인가/무엇이 바뀌었나 → 왜 중요한가 → 어떻게 쓰나 → 제한·주의 순으로 원문을 열지 않아도 이해할 만큼 쓴다. 릴리스 노트는 해당 버전의 모든 항목을 기록한다. 원문 미확인은 `details_note`에 남긴다. `**굵게**` 외 마크다운은 지원하지 않는다.
 - 태그 필터: 섹션별 칩. 여러 개 선택 가능, "전체"로 초기화.
 - 모든 항목에 출처 링크(새 탭, `rel="noopener"`) 표시.
 - `added_at`이 `baseline_added_at`보다 이후이고 `meta.last_updated` 기준 7일 이내인 항목에만 "NEW" 배지를 표시한다.
@@ -70,7 +76,9 @@ URL 규칙: 원문 출처가 `x.ai/changelog/bot` 처럼 축약돼 있으면 `ht
 
 ## 5. 새 조사 추가 흐름
 
-1. 해당 `data/*.json` 배열에 항목을 추가(`added_at` = 오늘).
+1. 해당 `data/*.json` 배열에 항목을 추가(`added_at` = 오늘). 모든 지원 항목에는 충분한 `details`를 작성한다.
 2. 새 출처면 `sources.json`에도 추가.
 3. `meta.json`의 `last_updated` 갱신.
-4. `node scripts/validate.mjs` 통과 확인 → 커밋.
+4. `node scripts/validate.mjs` 통과 확인(또는 `--dir`로 fixture 검사) → 커밋.
+
+상세 펼침 캡처는 `desktop-expanded-top`, `mobile-expanded-top`, `desktop-expanded-dark-top` 시나리오를 사용한다.

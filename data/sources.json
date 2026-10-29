@@ -588,5 +588,43 @@
     "site": "Digg",
     "url": "https://digg.com/ai/pr0s5ixy",
     "type": "blog"
+  },
+  {
+    "id": "source-grok-bot-sales",
+    "date": "2026-10-27",
+    "title": "x.ai: Your next sales teammate should be a Grok Bot",
+    "summary": "SpaceXSI 영업팀의 Shared Bots 3개(Account Intel, Quote, Deal) 사례",
+    "tags": [
+      "출처"
+    ],
+    "sources": [
+      {
+        "title": "x.ai: Your next sales teammate should be a Grok Bot",
+        "url": "https://x.ai/news/grok-bot-sales"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "site": "x.ai",
+    "url": "https://x.ai/news/grok-bot-sales",
+    "type": "official-news"
+  },
+  {
+    "id": "source-grok-bot-procurement",
+    "date": "2026-09-04",
+    "title": "x.ai: Setting Grok Bot loose on procurement",
+    "summary": "Haggle Bot으로 구매 비용 10만 달러 이상 절감한 사례",
+    "tags": [
+      "출처"
+    ],
+    "sources": [
+      {
+        "title": "x.ai: Setting Grok Bot loose on procurement",
+        "url": "https://x.ai/news/grok-bot-procurement"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "site": "x.ai",
+    "url": "https://x.ai/news/grok-bot-procurement",
+    "type": "official-news"
   }
 ]

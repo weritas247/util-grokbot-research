@@ -10,6 +10,10 @@
 ![모바일 첫 화면](docs/screenshots/mobile-top.png)
 [모바일 전체 페이지](docs/screenshots/mobile.png)
 
+![펼친 상세 화면](docs/screenshots/desktop-expanded-top.png)
+
+![모바일에서 펼친 상세 화면](docs/screenshots/mobile-expanded-top.png)
+
 ![다크 모드 첫 화면](docs/screenshots/desktop-dark-top.png)
 [다크 모드 전체 페이지](docs/screenshots/desktop-dark.png)
 
@@ -40,12 +44,20 @@ python3 -m http.server 18791
   "date": "2026-10-29",
   "title": "예시 팁 제목",
   "summary": "원문에서 확인한 팁 내용입니다.",
+  "details": [
+    { "heading": "무엇이 바뀌었나", "body": "원문에서 확인한 구체적인 내용입니다." },
+    { "heading": "왜 중요한가", "body": "사용자가 알아야 할 맥락입니다." },
+    { "heading": "어떻게 쓰나", "bullets": ["원문에서 확인한 사용 방법"] },
+    { "heading": "제한·주의", "body": "원문에 적힌 제한이나 주의점입니다." }
+  ],
   "tags": ["루틴"],
   "sources": [{ "title": "Routines 도움말", "url": "https://cursor.com/help/grok-bot/routines" }],
   "added_at": "2026-10-29",
   "order": 9
 }
 ```
+
+모든 새 업데이트·사례·팁·주의·추천 항목에는 비어 있지 않은 `details` 배열을 작성합니다. 각 섹션은 `heading`과 `body` 또는 `bullets`를 포함하며, `**굵게**`만 지원합니다. 내용은 원문 사실만 사용하고 원문을 직접 열지 않아도 이해할 수 있도록 무엇인가/무엇이 바뀌었나 → 왜 중요한가 → 어떻게 쓰나 → 제한·주의 순으로 충분히 설명하세요. 릴리스 노트는 해당 버전의 모든 항목을 빠짐없이 담습니다. 원문을 열 수 없었다면 `details_note`에 명시합니다.
 
 업데이트는 `data/updates.json`에 `version`(없으면 `null`)과 `kind`를 추가합니다.
 
@@ -64,6 +76,8 @@ python3 -m http.server 18791
 ```sh
 node scripts/validate.mjs
 ```
+
+검증기는 `node scripts/validate.mjs --dir /path/to/data`로 별도 fixture 디렉터리도 검사합니다. 스크린샷에는 펼친 상세 상태(`desktop-expanded-top.png`, `mobile-expanded-top.png`, `desktop-expanded-dark-top.png`)가 포함됩니다.
 
 NEW 배지는 `added_at`이 `meta.baseline_added_at`보다 이후이고 `meta.last_updated` 기준 7일 이내인 항목에 표시합니다.
 

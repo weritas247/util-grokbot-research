@@ -26,25 +26,31 @@ export function setupSearch(data) {
     for (const [label, key] of sections) {
       const items = key === 'recommendations' ? data[key].items : data[key];
       for (const item of items) {
-        const text = `${item.title} ${item.summary} ${(item.tags || []).join(' ')} ${item.actor || ''}`.toLowerCase();
+        const detailText = [item.details_note || '', ...(item.details || []).flatMap(part => [part.heading, part.body, ...(part.bullets || [])])].join(' ').replace(/\*\*/g, '');
+        const text = `${item.title} ${item.summary} ${(item.tags || []).join(' ')} ${item.actor || ''} ${detailText}`.toLowerCase();
         if (terms.every(term => text.includes(term))) {
-          matches.push({ item, label, text });
+          const base = `${item.title} ${item.summary} ${(item.tags || []).join(' ')} ${item.actor || ''}`.toLowerCase();
+          matches.push({ item, label, detailsOnly: terms.some(term => !base.includes(term) && detailText.toLowerCase().includes(term)), detailText });
         }
       }
     }
     $('#result-count').textContent = `${matches.length}개`;
     $('#results').innerHTML = matches.length
       ? matches
-          .map(({ item, label }) => {
-            const raw = item.summary.slice(0, 135);
+          .map(({ item, label, detailsOnly, detailText }) => {
+            const source = detailsOnly ? detailText : item.summary;
+            const matchAt = Math.max(0, source.toLowerCase().indexOf(terms.find(term => source.toLowerCase().includes(term)) || ''));
+            const start = detailsOnly ? Math.max(0, matchAt - 45) : 0;
+            const raw = source.slice(start, start + 135);
+            const escapedTerms = terms.map(term => term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
             const highlighted = esc(raw).replace(
               new RegExp(
-                `(${terms.map(term => term.replace(/[.*+?^${}()|[\\]\\]/g, '\\$&')).join('|')})`,
+                `(${escapedTerms.join('|')})`,
                 'ig',
               ),
               '<mark>$1</mark>',
             );
-            return `<a class="result" href="#${esc(item.id)}"><span class="badge">${label}</span><strong>${esc(item.title)}</strong><small>${highlighted}${item.summary.length > 135 ? '…' : ''}</small></a>`;
+            return `<a class="result" href="#${esc(item.id)}"><span class="badge">${label}</span><strong>${esc(item.title)}</strong><small>${start ? '…' : ''}${highlighted}${source.length > start + 135 ? '…' : ''}</small></a>`;
           })
           .join('')
       : '<p class="empty-results">검색 결과가 없습니다.</p>';

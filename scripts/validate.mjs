@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import path from 'node:path';
 
 const files = [
   'summary',
@@ -14,6 +15,8 @@ const ids = new Set();
 const date = /^\d{4}-\d{2}-\d{2}$/;
 const url = /^https:\/\//;
 const forbiddenTags = new Set(['요약', '업데이트', '팁', '주의', '추천']);
+const dirIndex = process.argv.indexOf('--dir');
+const dataDir = path.resolve(dirIndex >= 0 ? process.argv[dirIndex + 1] || 'data' : 'data');
 
 /** 항목 형식과 필수 필드를 검사합니다. */
 function check(item, path, allowNullDate = false) {
@@ -54,13 +57,34 @@ function check(item, path, allowNullDate = false) {
 const counts = {};
 for (const file of files) {
   try {
-    const json = JSON.parse(fs.readFileSync(`data/${file}.json`, 'utf8'));
+    const json = JSON.parse(fs.readFileSync(path.join(dataDir, `${file}.json`), 'utf8'));
     const items = file === 'recommendations' ? json.items : json;
     if (!Array.isArray(items)) {
       throw Error('배열 아님');
     }
     items.forEach((item, index) => {
       check(item, `${file}[${index}]`, file === 'sources');
+      if (['updates', 'usecases', 'tips', 'caveats', 'recommendations'].includes(file)) {
+        const label = `${file}[${index}]`;
+        if (!Array.isArray(item.details) || !item.details.length) errors.push(`${label}: details 누락 또는 빈 배열`);
+        else {
+          let length = 0;
+          item.details.forEach((part, partIndex) => {
+            const at = `${label}.details[${partIndex}]`;
+            if (!part || typeof part !== 'object' || Array.isArray(part)) { errors.push(`${at}: 객체 아님`); return; }
+            for (const key of Object.keys(part)) if (!['heading', 'body', 'bullets'].includes(key)) errors.push(`${at}: 허용되지 않은 키 ${key}`);
+            if (typeof part.heading !== 'string' || !part.heading.trim()) errors.push(`${at}: heading 누락`);
+            const hasBody = typeof part.body === 'string' && part.body.trim();
+            const hasBullets = Array.isArray(part.bullets) && part.bullets.length > 0 && part.bullets.every(value => typeof value === 'string' && value.trim());
+            if (part.body !== undefined && typeof part.body !== 'string') errors.push(`${at}: body는 문자열이어야 함`);
+            if (part.bullets !== undefined && (!Array.isArray(part.bullets) || part.bullets.some(value => typeof value !== 'string' || !value.trim()))) errors.push(`${at}: bullets는 비지 않은 문자열 배열이어야 함`);
+            if (!hasBody && !hasBullets) errors.push(`${at}: body 또는 bullets 필요`);
+            length += (part.heading || '').length + (typeof part.body === 'string' ? part.body.length : 0) + (Array.isArray(part.bullets) ? part.bullets.reduce((sum, value) => sum + (typeof value === 'string' ? value.length : 0), 0) : 0);
+          });
+          if (length < 200) errors.push(`${label}: details가 너무 짧음`);
+        }
+        if (item.details_note !== undefined && typeof item.details_note !== 'string') errors.push(`${label}: details_note는 문자열이어야 함`);
+      }
       if (file === 'updates' && item.title === item.summary) {
         errors.push(`${file}[${index}]: title과 summary가 같음`);
       }
@@ -93,14 +117,14 @@ for (const [file, key] of [
   ['sources', 'type'],
   ['sources', 'url'],
 ]) {
-  const json = JSON.parse(fs.readFileSync(`data/${file}.json`));
+  const json = JSON.parse(fs.readFileSync(path.join(dataDir, `${file}.json`)));
   for (const item of file === 'recommendations' ? json.items : json) {
     if (!(key in item)) {
       errors.push(`${file}: ${key} 누락`);
     }
   }
 }
-const meta = JSON.parse(fs.readFileSync('data/meta.json'));
+const meta = JSON.parse(fs.readFileSync(path.join(dataDir, 'meta.json')));
 if (!date.test(meta.last_updated)) {
   errors.push('meta.last_updated 형식 오류');
 }

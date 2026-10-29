@@ -123,6 +123,55 @@ function bind(data) {
     $('#more-updates').textContent = `이전 업데이트 ${Math.max(entries.length - 8, 0)}개 더 보기`;
   }
 
+  function revealHash() {
+    const id = decodeURIComponent(location.hash.slice(1));
+    const target = document.getElementById(id);
+    if (!target) return;
+    if (target.classList.contains('timeline-item')) {
+      timelineExpanded = true;
+      document.querySelectorAll('[data-filter="month"] .chip').forEach(chip => chip.classList.toggle('selected', chip.dataset.month === '*'));
+      document.querySelectorAll('[data-filter="kind"] .chip').forEach(chip => chip.classList.remove('selected'));
+      applyTimeline();
+      target.classList.remove('collapsed', 'filter-hidden');
+    } else {
+      target.classList.remove('hidden');
+      const section = target.closest('.section');
+      section?.querySelectorAll('.filters .chip').forEach(chip => chip.classList.toggle('selected', chip.dataset.value === '*'));
+      section?.querySelectorAll('.card.hidden').forEach(card => card.classList.remove('hidden'));
+    }
+    const details = target.querySelector('.item-details');
+    if (details) details.open = true;
+    requestAnimationFrame(() => {
+      target.scrollIntoView({ block: 'start', behavior: 'instant' });
+      target.classList.add('highlight');
+      setTimeout(() => target.classList.remove('highlight'), 1600);
+    });
+  }
+  window.addEventListener('hashchange', revealHash);
+  document.addEventListener('toggle', event => {
+    const details = event.target;
+    if (!details.matches?.('.item-details')) return;
+    const summary = details.querySelector('summary');
+    summary.textContent = details.open
+      ? '접기'
+      : `자세히 보기 · ${summary.dataset.sectionCount}개 섹션`;
+  }, true);
+  document.addEventListener('click', async event => {
+    const collapse = event.target.closest('.collapse-details');
+    if (collapse) {
+      const details = collapse.closest('.item-details');
+      const card = collapse.closest('article');
+      details.open = false;
+      const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      requestAnimationFrame(() => card.scrollIntoView({ block: 'start', behavior: reduceMotion ? 'auto' : 'smooth' }));
+      return;
+    }
+    const button = event.target.closest('.copy-item-link');
+    if (!button) return;
+    try { await navigator.clipboard.writeText(`${location.origin}${location.pathname}#${button.dataset.copyId}`); } catch {}
+  });
+  document.fonts.ready.then(() => requestAnimationFrame(revealHash));
+
   applyTimeline();
   $('#more-updates').onclick = () => {
     timelineExpanded = true;
