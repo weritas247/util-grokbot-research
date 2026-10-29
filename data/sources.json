@@ -1,0 +1,459 @@
+[
+  {
+    "id": "source-changelog",
+    "date": "2026-10-27",
+    "title": "Grok Bot Changelog",
+    "summary": "Grok Bot Changelog",
+    "tags": [
+      "출처"
+    ],
+    "sources": [
+      {
+        "title": "Grok Bot Changelog",
+        "url": "https://x.ai/changelog/bot"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "site": "x.ai",
+    "url": "https://x.ai/changelog/bot",
+    "type": "official-changelog"
+  },
+  {
+    "id": "source-intro",
+    "date": "2026-08-11",
+    "title": "Introducing Grok Bot",
+    "summary": "Introducing Grok Bot",
+    "tags": [
+      "출처"
+    ],
+    "sources": [
+      {
+        "title": "Introducing Grok Bot",
+        "url": "https://x.ai/news/introducing-grok-bot"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "site": "x.ai",
+    "url": "https://x.ai/news/introducing-grok-bot",
+    "type": "official-news"
+  },
+  {
+    "id": "source-incident",
+    "date": "2026-10-20",
+    "title": "Using Grok Bot to detect and respond to incidents",
+    "summary": "Using Grok Bot to detect and respond to incidents",
+    "tags": [
+      "출처"
+    ],
+    "sources": [
+      {
+        "title": "Using Grok Bot to detect and respond to incidents",
+        "url": "https://x.ai/news/incident-sweep"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "site": "x.ai",
+    "url": "https://x.ai/news/incident-sweep",
+    "type": "official-news"
+  },
+  {
+    "id": "source-news",
+    "date": null,
+    "title": "SpaceXSI News",
+    "summary": "SpaceXSI News",
+    "tags": [
+      "출처"
+    ],
+    "sources": [
+      {
+        "title": "SpaceXSI News",
+        "url": "https://x.ai/news"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "site": "x.ai",
+    "url": "https://x.ai/news",
+    "type": "official-news"
+  },
+  {
+    "id": "source-faq",
+    "date": null,
+    "title": "Grok Bot FAQ",
+    "summary": "Grok Bot FAQ",
+    "tags": [
+      "출처"
+    ],
+    "sources": [
+      {
+        "title": "Grok Bot FAQ",
+        "url": "https://docs.x.ai/grok-bot/faq"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "site": "docs.x.ai",
+    "url": "https://docs.x.ai/grok-bot/faq",
+    "type": "official-docs"
+  },
+  {
+    "id": "source-work",
+    "date": null,
+    "title": "Work with Grok Bot",
+    "summary": "Work with Grok Bot",
+    "tags": [
+      "출처"
+    ],
+    "sources": [
+      {
+        "title": "Work with Grok Bot",
+        "url": "https://cursor.com/docs/grok-bot/work"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "site": "cursor.com",
+    "url": "https://cursor.com/docs/grok-bot/work",
+    "type": "official-docs"
+  },
+  {
+    "id": "source-routines",
+    "date": null,
+    "title": "Routines 도움말",
+    "summary": "Routines 도움말",
+    "tags": [
+      "출처"
+    ],
+    "sources": [
+      {
+        "title": "Routines 도움말",
+        "url": "https://cursor.com/help/grok-bot/routines"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "site": "cursor.com",
+    "url": "https://cursor.com/help/grok-bot/routines",
+    "type": "official-docs"
+  },
+  {
+    "id": "source-plans",
+    "date": null,
+    "title": "Plans and billing",
+    "summary": "Plans and billing",
+    "tags": [
+      "출처"
+    ],
+    "sources": [
+      {
+        "title": "Plans and billing",
+        "url": "https://cursor.com/help/grok-bot/plans"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "site": "cursor.com",
+    "url": "https://cursor.com/help/grok-bot/plans",
+    "type": "official-docs"
+  },
+  {
+    "id": "source-sales",
+    "date": "2026-10-28",
+    "title": "@bot: Shared Bots for sales",
+    "summary": "@bot: Shared Bots for sales",
+    "tags": [
+      "출처"
+    ],
+    "sources": [
+      {
+        "title": "@bot: Shared Bots for sales",
+        "url": "https://x.com/bot/status/2115130760009273501"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "site": "x.com",
+    "url": "https://x.com/bot/status/2115130760009273501",
+    "type": "official-x"
+  },
+  {
+    "id": "source-vault",
+    "date": "2026-10-24",
+    "title": "@bot: Vault",
+    "summary": "@bot: Vault",
+    "tags": [
+      "출처"
+    ],
+    "sources": [
+      {
+        "title": "@bot: Vault",
+        "url": "https://x.com/bot/status/2113717946019397910"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "site": "x.com",
+    "url": "https://x.com/bot/status/2113717946019397910",
+    "type": "official-x"
+  },
+  {
+    "id": "source-phone",
+    "date": "2026-10-23",
+    "title": "@bot: 폰 앱 연동",
+    "summary": "@bot: 폰 앱 연동",
+    "tags": [
+      "출처"
+    ],
+    "sources": [
+      {
+        "title": "@bot: 폰 앱 연동",
+        "url": "https://x.com/bot/status/2113393684209176718"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "site": "x.com",
+    "url": "https://x.com/bot/status/2113393684209176718",
+    "type": "official-x"
+  },
+  {
+    "id": "source-password",
+    "date": "2026-10-23",
+    "title": "@bot: 1Password",
+    "summary": "@bot: 1Password",
+    "tags": [
+      "출처"
+    ],
+    "sources": [
+      {
+        "title": "@bot: 1Password",
+        "url": "https://x.com/bot/status/2113332983226831339"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "site": "x.com",
+    "url": "https://x.com/bot/status/2113332983226831339",
+    "type": "official-x"
+  },
+  {
+    "id": "source-pages",
+    "date": "2026-10-22",
+    "title": "@bot: Pages",
+    "summary": "@bot: Pages",
+    "tags": [
+      "출처"
+    ],
+    "sources": [
+      {
+        "title": "@bot: Pages",
+        "url": "https://x.com/bot/status/2112992872857252082"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "site": "x.com",
+    "url": "https://x.com/bot/status/2112992872857252082",
+    "type": "official-x"
+  },
+  {
+    "id": "source-action",
+    "date": "2026-10-20",
+    "title": "@bot: Action Button",
+    "summary": "@bot: Action Button",
+    "tags": [
+      "출처"
+    ],
+    "sources": [
+      {
+        "title": "@bot: Action Button",
+        "url": "https://x.com/bot/status/2112282506284445787"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "site": "x.com",
+    "url": "https://x.com/bot/status/2112282506284445787",
+    "type": "official-x"
+  },
+  {
+    "id": "source-speed",
+    "date": "2026-10-17",
+    "title": "@bot: 속도 3배 등 묶음 발표",
+    "summary": "@bot: 속도 3배 등 묶음 발표",
+    "tags": [
+      "출처"
+    ],
+    "sources": [
+      {
+        "title": "@bot: 속도 3배 등 묶음 발표",
+        "url": "https://x.com/bot/status/2111184275374813362"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "site": "x.com",
+    "url": "https://x.com/bot/status/2111184275374813362",
+    "type": "official-x"
+  },
+  {
+    "id": "source-arda",
+    "date": "2026-10-11",
+    "title": "How I use Grok Bot to automate my business",
+    "summary": "How I use Grok Bot to automate my business",
+    "tags": [
+      "출처"
+    ],
+    "sources": [
+      {
+        "title": "How I use Grok Bot to automate my business",
+        "url": "https://blog.arda.tr/blog/2026-10-11-how-i-use-grok-bot-to-automate-my-business/"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "site": "blog.arda.tr",
+    "url": "https://blog.arda.tr/blog/2026-10-11-how-i-use-grok-bot-to-automate-my-business/",
+    "type": "blog"
+  },
+  {
+    "id": "source-reddit",
+    "date": "2026-08-23",
+    "title": "Is Grok Bot Worth it?",
+    "summary": "Is Grok Bot Worth it?",
+    "tags": [
+      "출처"
+    ],
+    "sources": [
+      {
+        "title": "Is Grok Bot Worth it?",
+        "url": "https://www.reddit.com/r/cursor/comments/1vvx2fg/is_grok_bot_worth_it/"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "site": "reddit.com/r/cursor",
+    "url": "https://www.reddit.com/r/cursor/comments/1vvx2fg/is_grok_bot_worth_it/",
+    "type": "community"
+  },
+  {
+    "id": "source-reddit2",
+    "date": null,
+    "title": "Grok Bot (초기 사용 후기)",
+    "summary": "Grok Bot (초기 사용 후기)",
+    "tags": [
+      "출처"
+    ],
+    "sources": [
+      {
+        "title": "Grok Bot (초기 사용 후기)",
+        "url": "https://www.reddit.com/r/grok/comments/1vob5q2/grok_bot/"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "site": "reddit.com/r/grok",
+    "url": "https://www.reddit.com/r/grok/comments/1vob5q2/grok_bot/",
+    "type": "community",
+    "date_label": "2026-08"
+  },
+  {
+    "id": "source-xfreeze",
+    "date": "2026-10-28",
+    "title": "Fix these mistakes holding it back",
+    "summary": "Fix these mistakes holding it back",
+    "tags": [
+      "출처"
+    ],
+    "sources": [
+      {
+        "title": "Fix these mistakes holding it back",
+        "url": "https://x.com/XFreeze/status/2115103136125997258"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "site": "x.com/XFreeze",
+    "url": "https://x.com/XFreeze/status/2115103136125997258",
+    "type": "community"
+  },
+  {
+    "id": "source-michael",
+    "date": "2026-10-03",
+    "title": "루틴 전 6단계 테스트",
+    "summary": "루틴 전 6단계 테스트",
+    "tags": [
+      "출처"
+    ],
+    "sources": [
+      {
+        "title": "루틴 전 6단계 테스트",
+        "url": "https://x.com/Michael_Fenech_/status/2106352565528977469"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "site": "x.com/Michael_Fenech_",
+    "url": "https://x.com/Michael_Fenech_/status/2106352565528977469",
+    "type": "community"
+  },
+  {
+    "id": "source-twins",
+    "date": "2026-10-17",
+    "title": "Grok Voice + Grok Bot 영상",
+    "summary": "Grok Voice + Grok Bot 영상",
+    "tags": [
+      "출처"
+    ],
+    "sources": [
+      {
+        "title": "Grok Voice + Grok Bot 영상",
+        "url": "https://x.com/Texas_Twins_Dad/status/2111274264921788427"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "site": "x.com/Texas_Twins_Dad",
+    "url": "https://x.com/Texas_Twins_Dad/status/2111274264921788427",
+    "type": "community"
+  },
+  {
+    "id": "source-tejas",
+    "date": "2026-10-22",
+    "title": "Claude Code + Grok Bot 연동",
+    "summary": "Claude Code + Grok Bot 연동",
+    "tags": [
+      "출처"
+    ],
+    "sources": [
+      {
+        "title": "Claude Code + Grok Bot 연동",
+        "url": "https://x.com/tejas3732/status/2113108960538742944"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "site": "x.com/tejas3732",
+    "url": "https://x.com/tejas3732/status/2113108960538742944",
+    "type": "community"
+  },
+  {
+    "id": "source-codeshift",
+    "date": "2026-08-17",
+    "title": "그록봇이란? 실사용 보고",
+    "summary": "그록봇이란? 실사용 보고",
+    "tags": [
+      "출처"
+    ],
+    "sources": [
+      {
+        "title": "그록봇이란? 실사용 보고",
+        "url": "https://codeshift.kr/blog/grok-bot-xai-ai-agent-review-2026"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "site": "codeshift.kr",
+    "url": "https://codeshift.kr/blog/grok-bot-xai-ai-agent-review-2026",
+    "type": "review"
+  },
+  {
+    "id": "source-develog",
+    "date": "2026-10-06",
+    "title": "Grok Bot 리뷰",
+    "summary": "Grok Bot 리뷰",
+    "tags": [
+      "출처"
+    ],
+    "sources": [
+      {
+        "title": "Grok Bot 리뷰",
+        "url": "https://develog.develrocket.com/@kimkyungil/grok-bot-%EB%A6%AC%EB%B7%B0"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "site": "develog",
+    "url": "https://develog.develrocket.com/@kimkyungil/grok-bot-%EB%A6%AC%EB%B7%B0",
+    "type": "review"
+  }
+]

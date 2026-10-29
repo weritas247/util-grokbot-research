@@ -1,0 +1,174 @@
+[
+  {
+    "id": "usecase-01",
+    "date": "2026-10-11",
+    "title": "봇 14개가 스튜디오 사무 업무 담당 (Arda Karaduman, 10/11)",
+    "summary": "itch.io 플레이어 댓글을 문제 하나당 이슈 하나로 나눠 GitHub 이슈 8개를 만들었어요(itch-feedback 라벨). Claude Code가 코드와 대조해 측정한 뒤 수정했고, 머지까지 약 19시간 걸렸어요. 월요일 루틴은 Steam 수치를 모아 게시물 초안을 쓰고, 사이트를 갱신한 다음 Buffer에 예약해요. 게임 외형·플레이에 영향을 주는 결정은 본인이 승인해요.",
+    "tags": [
+      "루틴",
+      "GitHub",
+      "승인"
+    ],
+    "sources": [
+      {
+        "title": "How I use Grok Bot to automate my business",
+        "url": "https://blog.arda.tr/blog/2026-10-11-how-i-use-grok-bot-to-automate-my-business/"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "actor": "1인 게임 스튜디오",
+    "category": "게임 개발",
+    "metrics": [
+      "GitHub 이슈 8개",
+      "머지까지 약 19시간"
+    ]
+  },
+  {
+    "id": "usecase-02",
+    "date": "2026-10-20",
+    "title": "장애 감지와 티켓 일괄 응답 (공식, 10/20)",
+    "summary": "IncidentWatch가 5분마다 최근 15분 티켓에서 급증을 찾아요. IncidentSweep은 엔지니어가 배치를 승인하면 티켓 204건을 약 10분 만에 처리했어요. 승인 뒤에는 대상 티켓을 추가하지 않고, 실패하면 멈춰서 보고해요.",
+    "tags": [
+      "승인",
+      "지원",
+      "모니터링"
+    ],
+    "sources": [
+      {
+        "title": "Using Grok Bot to detect and respond to incidents",
+        "url": "https://x.ai/news/incident-sweep"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "actor": "xAI 지원팀",
+    "category": "지원",
+    "metrics": [
+      "티켓 204건 약 10분"
+    ]
+  },
+  {
+    "id": "usecase-03",
+    "date": "2026-10-27",
+    "title": "Shared Bots로 영업 지원 (공식, 10/27)",
+    "summary": "Account Intel Bot은 통화 후 CRM을 업데이트하고, Quote Bot은 제안서를 만들고, Deal Bot은 비표준 계약 조건을 검토해 승인 요청으로 넘겨요.",
+    "tags": [
+      "승인",
+      "영업",
+      "지원"
+    ],
+    "sources": [
+      {
+        "title": "@bot: Shared Bots for sales",
+        "url": "https://x.com/bot/status/2115130760009273501"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "actor": "xAI 영업 운영",
+    "category": "영업",
+    "metrics": []
+  },
+  {
+    "id": "usecase-04",
+    "date": "2026-09-16",
+    "title": "구매 비용 분석으로 10만 달러 이상 절감 (공식, 9/16)",
+    "summary": "벤더 지출, 계약, 사용 데이터에 접근하게 해서 직접 절감액을 찾았어요(뉴스 목록 요약 기준).",
+    "tags": [
+      "루틴"
+    ],
+    "sources": [
+      {
+        "title": "SpaceXSI News",
+        "url": "https://x.ai/news"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "actor": "xAI 구매",
+    "category": "영업",
+    "metrics": [
+      "10만 달러 이상 절감"
+    ]
+  },
+  {
+    "id": "usecase-05",
+    "date": "2026-08-23",
+    "title": "일상 모니터링 묶음 (r/cursor, 8/23)",
+    "summary": "경쟁사 웹·SNS 모니터링, CVE·보안 공지 알림, 메일 속 영수증을 날짜·업체·금액 이름으로 저장, 날씨 변화 알림, 일정 요약을 돌려요. SuperGrok Heavy인데도 이걸로 사용량 절반을 쓴다고 했어요.",
+    "tags": [
+      "보안",
+      "사용량",
+      "이메일"
+    ],
+    "sources": [
+      {
+        "title": "Is Grok Bot Worth it?",
+        "url": "https://www.reddit.com/r/cursor/comments/1vvx2fg/is_grok_bot_worth_it/"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "actor": "Reddit 사용자",
+    "category": "모니터링",
+    "metrics": []
+  },
+  {
+    "id": "usecase-06",
+    "date": "2026-10-17",
+    "title": "음성 클론 + 자막 영상 제작 (@Texas_Twins_Dad, 10/17)",
+    "summary": "Grok Voice로 자기 목소리를 복제하고 대본을 읽힌 뒤, 그 음성 파일을 봇에 주면 자막과 애니메이션이 들어간 영상을 만들어줘요.",
+    "tags": [
+      "음성",
+      "영상",
+      "크리에이터"
+    ],
+    "sources": [
+      {
+        "title": "Grok Voice + Grok Bot 영상",
+        "url": "https://x.com/Texas_Twins_Dad/status/2111274264921788427"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "actor": "크리에이터",
+    "category": "크리에이터",
+    "metrics": []
+  },
+  {
+    "id": "usecase-07",
+    "date": "2026-10-22",
+    "title": "Claude Code 원격 제어와 연동 (@tejas3732, 10/22)",
+    "summary": "봇이 띄운 Claude Code 세션을 원격 제어로 Claude 앱에서도 열어서, 같은 세션을 보면서 방향을 바꿔요.",
+    "tags": [
+      "개발자"
+    ],
+    "sources": [
+      {
+        "title": "Claude Code + Grok Bot 연동",
+        "url": "https://x.com/tejas3732/status/2113108960538742944"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "actor": "개발자",
+    "category": "개발자",
+    "metrics": []
+  },
+  {
+    "id": "usecase-08",
+    "date": "2026-10-06",
+    "title": "게임 개발보다는 조사·문서 작업 (김경일, 10/6)",
+    "summary": "개발은 GitHub 위주로 하고 Unity는 안 돼서 2/5점을 줬어요. 반면 자료 조사, Google Drive·Notion 정리, 봇끼리 아트·기획·PM 회의는 잘 됐다고 했어요.",
+    "tags": [
+      "GitHub",
+      "게임 개발"
+    ],
+    "sources": [
+      {
+        "title": "Grok Bot 리뷰",
+        "url": "https://develog.develrocket.com/@kimkyungil/grok-bot-%EB%A6%AC%EB%B7%B0"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "actor": "국내 리뷰",
+    "category": "국내",
+    "metrics": [
+      "2/5점"
+    ]
+  }
+]

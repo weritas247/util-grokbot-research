@@ -1,0 +1,143 @@
+{
+  "context": "1인 게임 개발 + 봇 여러 개 + GitHub(weritas247) + Boot Camp PC 서버 + 가계부 앱 기준. 개발은 Codex가 하고 봇은 방향 잡기·리뷰만 하는 규칙을 전제로 했어요.",
+  "items": [
+    {
+      "id": "recommendation-01",
+      "date": "2026-10-29",
+      "title": "플레이어 피드백 → GitHub 이슈 봇",
+      "summary": "Arda처럼 itch·Steam 리뷰를 매주 '문제 하나에 이슈 하나'로 등록하게 하세요. 구현은 Boot Camp PC의 Codex가 이슈를 받아서 하고, 봇은 리뷰만 해요.",
+      "tags": [
+        "GitHub",
+        "게임 개발",
+        "개발자"
+      ],
+      "sources": [
+        {
+          "title": "How I use Grok Bot to automate my business",
+          "url": "https://blog.arda.tr/blog/2026-10-11-how-i-use-grok-bot-to-automate-my-business/"
+        }
+      ],
+      "added_at": "2026-10-29",
+      "order": 1
+    },
+    {
+      "id": "recommendation-02",
+      "date": "2026-10-29",
+      "title": "GitHub PR 감시 루틴",
+      "summary": "PR 하나만 감시하는 루틴은 머지되거나 닫히면 저절로 없어져요. Codex가 올린 PR을 리뷰 봇이 이벤트로 받게 하고, 1시간마다 확인하는 방식은 쓰지 마세요.",
+      "tags": [
+        "루틴",
+        "GitHub",
+        "개발자"
+      ],
+      "sources": [
+        {
+          "title": "Grok Bot Changelog",
+          "url": "https://x.ai/changelog/bot"
+        }
+      ],
+      "added_at": "2026-10-29",
+      "order": 2
+    },
+    {
+      "id": "recommendation-03",
+      "date": "2026-10-29",
+      "title": "Boot Camp PC 연결",
+      "summary": "Settings → Computer에서 그 PC의 Execution 정책을 Ask로 두세요. 서버 상태나 배포 결과는 웹훅 루틴으로 POST하면 본문이 봇한테 전달돼요.",
+      "tags": [
+        "루틴",
+        "웹훅"
+      ],
+      "sources": [
+        {
+          "title": "Routines 도움말",
+          "url": "https://cursor.com/help/grok-bot/routines"
+        }
+      ],
+      "added_at": "2026-10-29",
+      "order": 3
+    },
+    {
+      "id": "recommendation-04",
+      "date": "2026-10-29",
+      "title": "한국 사이트는 트래픽 우회",
+      "summary": "네이버 등 한국 서비스 작업이 필요할 때만 'Route traffic through this computer'를 켜세요. PC가 잠들면 끊긴다는 걸 기억하세요.",
+      "tags": [
+        "한국 사이트"
+      ],
+      "sources": [
+        {
+          "title": "Grok Bot Changelog",
+          "url": "https://x.ai/changelog/bot"
+        }
+      ],
+      "added_at": "2026-10-29",
+      "order": 4
+    },
+    {
+      "id": "recommendation-05",
+      "date": "2026-10-29",
+      "title": "Chief of Staff + 봇 감사 Page",
+      "summary": "봇 전용 메일과 +별칭으로 들어오는 일을 나누고, 한 달에 한 번 '봇·루틴 지도'를 Page로 만들게 해서 겹치는 루틴과 안 쓰는 봇을 정리하세요.",
+      "tags": [
+        "루틴",
+        "이메일",
+        "Pages"
+      ],
+      "sources": [
+        {
+          "title": "Grok Bot Changelog",
+          "url": "https://x.ai/changelog/bot"
+        }
+      ],
+      "added_at": "2026-10-29",
+      "order": 5
+    },
+    {
+      "id": "recommendation-06",
+      "date": "2026-10-29",
+      "title": "공유 컴퓨터 보안 정리",
+      "summary": "GitHub·Cloudflare 토큰은 시크릿 카드나 Vault로 넣으세요. 가계부처럼 민감한 데이터는 꼭 필요한 봇만 다루게 하고, 지운 봇의 로그인은 따로 정리하세요.",
+      "tags": [
+        "Vault",
+        "보안",
+        "GitHub"
+      ],
+      "sources": [
+        {
+          "title": "Grok Bot FAQ",
+          "url": "https://docs.x.ai/grok-bot/faq"
+        },
+        {
+          "title": "@bot: Vault",
+          "url": "https://x.com/bot/status/2113717946019397910"
+        }
+      ],
+      "added_at": "2026-10-29",
+      "order": 6
+    },
+    {
+      "id": "recommendation-07",
+      "date": "2026-10-29",
+      "title": "사용량 관리",
+      "summary": "X Subscription에서는 Cursor·Grok과 풀을 같이 써요. Settings → Usage & Billing을 매주 확인하고, 자주 도는 루틴부터 간격을 넓히세요.",
+      "tags": [
+        "루틴",
+        "요금제",
+        "사용량"
+      ],
+      "sources": [
+        {
+          "title": "Plans and billing",
+          "url": "https://cursor.com/help/grok-bot/plans"
+        }
+      ],
+      "added_at": "2026-10-29",
+      "order": 7
+    }
+  ],
+  "quote": {
+    "text": "Grok Bot is the office. The workshop is still Claude Code, which writes the actual code, and the line between them is a GitHub issue.",
+    "cite": "Arda Karaduman, 1인 스튜디오 Gand"
+  }
+}

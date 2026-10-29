@@ -1,0 +1,190 @@
+[
+  {
+    "id": "caveat-01",
+    "date": "2026-10-29",
+    "title": "모든 봇이 컴퓨터 한 대를 공유",
+    "summary": "컴퓨터 한 대를 모든 봇이 같이 써요. 파일, 브라우저 세션, CLI 자격 증명이 다 공유되니 봇을 보안 경계로 쓰면 안 돼요. 봇을 지워도 로그인과 파일은 남아요(공식 FAQ).",
+    "tags": [
+      "보안",
+      "공유 컴퓨터"
+    ],
+    "sources": [
+      {
+        "title": "Grok Bot FAQ",
+        "url": "https://docs.x.ai/grok-bot/faq"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "severity": "high"
+  },
+  {
+    "id": "caveat-02",
+    "date": "2026-10-29",
+    "title": "Test도 실제 작업",
+    "summary": "Test는 실제 작업이에요. 파일을 바꾸고 연결된 앱을 써요. 실제 저장소 말고 테스트용 저장소에서 시험하세요.",
+    "tags": [
+      "루틴"
+    ],
+    "sources": [
+      {
+        "title": "Work with Grok Bot",
+        "url": "https://cursor.com/docs/grok-bot/work"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "severity": "high"
+  },
+  {
+    "id": "caveat-03",
+    "date": "2026-10-29",
+    "title": "루틴 사용량이 빨리 닳음",
+    "summary": "사용량: 공식 안내로도 1시간마다 도는 루틴이나 바쁜 Slack 채널 트리거는 '하루에 일주일 치'를 쓸 수 있어요. Reddit에는 '첫날에 주간 한도 42% 사용'이라는 후기가 있어요(8월 베타).",
+    "tags": [
+      "루틴",
+      "사용량"
+    ],
+    "sources": [
+      {
+        "title": "Routines 도움말",
+        "url": "https://cursor.com/help/grok-bot/routines"
+      },
+      {
+        "title": "Grok Bot (초기 사용 후기)",
+        "url": "https://www.reddit.com/r/grok/comments/1vob5q2/grok_bot/"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "severity": "medium"
+  },
+  {
+    "id": "caveat-04",
+    "date": "2026-10-29",
+    "title": "루틴 실행 한도 300회·200회",
+    "summary": "루틴 한도는 전체 시간당 300회, 루틴 하나당 200회예요. 모든 사용자가 같이 쓰는 한도 때문에 'Automation run rate limit exceeded'가 나는 알려진 문제가 있고, 이때는 자동으로 다시 실행되지 않아요.",
+    "tags": [
+      "루틴",
+      "사용량"
+    ],
+    "sources": [
+      {
+        "title": "Grok Bot Changelog",
+        "url": "https://x.ai/changelog/bot"
+      },
+      {
+        "title": "Routines 도움말",
+        "url": "https://cursor.com/help/grok-bot/routines"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "severity": "medium"
+  },
+  {
+    "id": "caveat-05",
+    "date": "2026-10-29",
+    "title": "무인 작업 승인은 약 30분 뒤 만료",
+    "summary": "사람 없이 시작된 작업(루틴, 다른 봇 메시지)의 승인은 약 30분 뒤 만료돼요. '10분'이라고 쓴 가이드는 0.77.0 이전 정보예요.",
+    "tags": [
+      "루틴",
+      "승인"
+    ],
+    "sources": [
+      {
+        "title": "Grok Bot Changelog",
+        "url": "https://x.ai/changelog/bot"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "severity": "medium"
+  },
+  {
+    "id": "caveat-06",
+    "date": "2026-10-29",
+    "title": "모델 선택·표시 불가",
+    "summary": "모델은 직접 고를 수 없고, 어떤 모델이 썼는지도 표시되지 않아요(FAQ).",
+    "tags": [
+      "루틴"
+    ],
+    "sources": [
+      {
+        "title": "Grok Bot FAQ",
+        "url": "https://docs.x.ai/grok-bot/faq"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "severity": "info"
+  },
+  {
+    "id": "caveat-07",
+    "date": "2026-10-29",
+    "title": "한국 사이트가 클라우드 IP 차단",
+    "summary": "클라우드 IP 차단: 8월 국내 리뷰는 네이버가 해외 IP를 막는다고 지적했어요. 9/11부터 생긴 트래픽 우회 옵션으로 줄일 수 있지만, 내 PC가 잠들면 끊겨요.",
+    "tags": [
+      "한국 사이트"
+    ],
+    "sources": [
+      {
+        "title": "Grok Bot 리뷰",
+        "url": "https://develog.develrocket.com/@kimkyungil/grok-bot-%EB%A6%AC%EB%B7%B0"
+      },
+      {
+        "title": "Grok Bot Changelog",
+        "url": "https://x.ai/changelog/bot"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "severity": "medium"
+  },
+  {
+    "id": "caveat-08",
+    "date": "2026-10-29",
+    "title": "연결 문제를 장애로 오보고",
+    "summary": "봇이 자기한테 연결이 안 된 걸 '서비스 장애'라고 잘못 보고한 사례가 있어요(Arda의 Google Calendar 사례).",
+    "tags": [
+      "모니터링"
+    ],
+    "sources": [
+      {
+        "title": "How I use Grok Bot to automate my business",
+        "url": "https://blog.arda.tr/blog/2026-10-11-how-i-use-grok-bot-to-automate-my-business/"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "severity": "info"
+  },
+  {
+    "id": "caveat-09",
+    "date": "2026-10-29",
+    "title": "봇이 늘면 루틴이 겹침",
+    "summary": "봇이 늘면 루틴이 겹쳐요. Arda는 월요일 오전에 루틴 8개가 몰리고, 아침 브리핑이 두 군데서 오는 걸 발견했어요.",
+    "tags": [
+      "루틴"
+    ],
+    "sources": [
+      {
+        "title": "How I use Grok Bot to automate my business",
+        "url": "https://blog.arda.tr/blog/2026-10-11-how-i-use-grok-bot-to-automate-my-business/"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "severity": "info"
+  },
+  {
+    "id": "caveat-10",
+    "date": "2026-10-29",
+    "title": "Teach a task 제한",
+    "summary": "Teach a task(시연으로 스킬 만들기)는 순차 배포 중이고 녹화는 최대 10분이에요. Legacy Privacy Mode는 지원하지 않아요.",
+    "tags": [
+      "보안",
+      "GitHub",
+      "스킬"
+    ],
+    "sources": [
+      {
+        "title": "Work with Grok Bot",
+        "url": "https://cursor.com/docs/grok-bot/work"
+      }
+    ],
+    "added_at": "2026-10-29",
+    "severity": "info"
+  }
+]

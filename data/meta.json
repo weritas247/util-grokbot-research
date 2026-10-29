@@ -1,0 +1,20 @@
+{
+  "title": "그록봇 리서치: 최신 업데이트·사용 사례·팁",
+  "research_date": "2026-10-29",
+  "last_updated": "2026-10-29",
+  "source_page_url": "https://cursor.com/canvas/store-b9ca17ff-740e-44e5-9405-df8c8856d507/8b3edaec-0a7c-4dcd-a8a8-bac78cf54d7b",
+  "summary": "2026-10-29 기준. 공식 변경 기록, 문서, @bot 계정, X·Reddit·블로그 사례를 모아 최근 바뀐 점과 실제 활용법, 주의할 점, Matthew님한테 맞는 활용법을 정리했어요.",
+  "notes": [
+    "출처 수준: X 트렌드 요약(Grok이 생성한 요약)에 나온 이야기들은 원문을 확인하지 못해서 위 목록에서 뺐어요. 8월 Reddit 불만(크롬 프로필 매일 초기화 등)은 베타 초기 이야기예요. 이후 릴리스 노트에 로그인 유지 수정이 여러 번 있었어요."
+  ],
+  "files": [
+    "summary",
+    "updates",
+    "usecases",
+    "tips",
+    "caveats",
+    "recommendations",
+    "sources"
+  ],
+  "baseline_added_at": "2026-10-29"
+}

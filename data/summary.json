@@ -1,0 +1,124 @@
+[
+  {
+    "id": "summary-1",
+    "date": "2026-10-29",
+    "title": "10월 말 대형 업데이트 몰림",
+    "summary": "10월 22~27일에 큰 업데이트가 몰렸어요. Pages, 영상 생성, Vault, 1Password, 채팅에서 Auto-review 규칙 만들기, 쇼핑·구독 템플릿이 이 기간에 나왔어요(v0.75.2~v0.78.1).",
+    "tags": [
+      "Vault",
+      "쇼핑",
+      "승인"
+    ],
+    "sources": [
+      {
+        "title": "Grok Bot Changelog",
+        "url": "https://x.ai/changelog/bot"
+      }
+    ],
+    "added_at": "2026-10-29"
+  },
+  {
+    "id": "summary-2",
+    "date": "2026-10-29",
+    "title": "요금제가 X Subscription으로 통합",
+    "summary": "요금제가 바뀌었어요. The X Subscription에서는 Premium·Super·Ultra에 포함되고, Cursor·Grok과 같은 주간 사용량 풀을 써요. 예전처럼 따로 쓰는 사용량이 아니에요.",
+    "tags": [
+      "요금제",
+      "사용량",
+      "GitHub"
+    ],
+    "sources": [
+      {
+        "title": "Plans and billing",
+        "url": "https://cursor.com/help/grok-bot/plans"
+      }
+    ],
+    "added_at": "2026-10-29"
+  },
+  {
+    "id": "summary-3",
+    "date": "2026-10-29",
+    "title": "공식 사례: 봇 하나에 일 하나 + 사람 승인",
+    "summary": "공식 사례는 '봇 하나에 일 하나 + 사람 승인' 구조예요. 장애 티켓 204건을 10분 만에 일괄 처리했고, 영업 팀에는 Shared Bots를 붙였어요.",
+    "tags": [
+      "승인",
+      "영업",
+      "지원"
+    ],
+    "sources": [
+      {
+        "title": "Using Grok Bot to detect and respond to incidents",
+        "url": "https://x.ai/news/incident-sweep"
+      }
+    ],
+    "added_at": "2026-10-29"
+  },
+  {
+    "id": "summary-4",
+    "date": "2026-10-29",
+    "title": "1인 게임 스튜디오: 봇 14개 + 코딩 에이전트",
+    "summary": "1인 게임 스튜디오 사례가 있어요. 봇 14개가 '사무실'을 맡고, 코딩 에이전트가 '작업장'을 맡아요. 둘 사이는 GitHub 이슈로 넘겨요.",
+    "tags": [
+      "GitHub",
+      "게임 개발"
+    ],
+    "sources": [
+      {
+        "title": "How I use Grok Bot to automate my business",
+        "url": "https://blog.arda.tr/blog/2026-10-11-how-i-use-grok-bot-to-automate-my-business/"
+      }
+    ],
+    "added_at": "2026-10-29"
+  },
+  {
+    "id": "summary-5",
+    "date": "2026-10-29",
+    "title": "커뮤니티 공통 팁",
+    "summary": "커뮤니티 공통 팁은 '작업 → 수정 → 스킬 → 테스트 → 루틴' 순서와, 1시간마다 확인하는 대신 이벤트 트리거를 쓰는 거예요.",
+    "tags": [
+      "루틴",
+      "스킬"
+    ],
+    "sources": [
+      {
+        "title": "루틴 전 6단계 테스트",
+        "url": "https://x.com/Michael_Fenech_/status/2106352565528977469"
+      }
+    ],
+    "added_at": "2026-10-29"
+  },
+  {
+    "id": "summary-6",
+    "date": "2026-10-29",
+    "title": "공유 컴퓨터·사용량 주의",
+    "summary": "주의할 점: 봇들이 컴퓨터 한 대를 같이 쓰고(보안 경계 아님), 테스트 실행도 실제 작업이에요. 루틴을 자주 돌리면 사용량이 빨리 닳아요.",
+    "tags": [
+      "보안",
+      "루틴",
+      "사용량"
+    ],
+    "sources": [
+      {
+        "title": "Grok Bot FAQ",
+        "url": "https://docs.x.ai/grok-bot/faq"
+      }
+    ],
+    "added_at": "2026-10-29"
+  },
+  {
+    "id": "summary-7",
+    "date": "2026-10-29",
+    "title": "한국 사이트 IP 차단 우회",
+    "summary": "한국 사이트는 클라우드(미국) IP라서 막힐 수 있어요. Settings → Computer의 'Route traffic through this computer'로 내 PC를 거쳐 접속할 수 있어요.",
+    "tags": [
+      "한국 사이트"
+    ],
+    "sources": [
+      {
+        "title": "Grok Bot 리뷰",
+        "url": "https://develog.develrocket.com/@kimkyungil/grok-bot-%EB%A6%AC%EB%B7%B0"
+      }
+    ],
+    "added_at": "2026-10-29"
+  }
+]
